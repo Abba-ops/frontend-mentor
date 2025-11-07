@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog preview card</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            body: ["Figtree", "serif"],
+          },
+          extend: {
+            colors: {
+              yellow: "hsl(47, 88%, 63%)",
+              gray: {
+                500: "hsl(0, 0%, 42%)",
+                950: "hsl(0, 0%, 7%)",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main
+      class="min-h-screen flex justify-center items-center bg-yellow p-4 font-body">
+      <article
+        class="bg-white max-w-[23rem] font-medium p-5 rounded-3xl border border-black shadow-[0.5rem_0.5rem]">
+        <img
+          alt="article illustration"
+          src="images/illustration-article.svg"
+          class="rounded-xl mb-5" />
+        <div
+          class="bg-yellow text-gray-950 text-sm font-extrabold rounded px-2.5 py-1 w-fit">
+          Learning
+        </div>
+        <time datetime="2023-12-21" class="text-sm text-gray-950 my-3 block">
+          Published 21 Dec 2023
+        </time>
+        <h2
+          class="text-2xl text-gray-950 font-extrabold mb-3 transition-colors hover:text-yellow">
+          HTML & CSS foundations
+        </h2>
+        <p class="text-gray-500 leading-6">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+        <div class="flex items-center gap-2.5 mt-6">
+          <img alt="avatar" src="images/image-avatar.webp" class="w-8" />
+          <span class="font-extrabold text-sm text-gray-950">Greg Hooper</span>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

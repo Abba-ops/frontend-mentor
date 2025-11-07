@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product preview card component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            body: ["Montserrat", "serif"],
+            display: ["Fraunces", "serif"],
+          },
+          extend: {
+            colors: {
+              "dark-cyan": "hsl(158, 36%, 37%)",
+              cream: "hsl(30, 38%, 92%)",
+              "very-dark-blue": "hsl(212, 21%, 14%)",
+              "dark-grayish-blue": "hsl(228, 12%, 48%)",
+              white: "hsl(0, 0%, 100%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main class="h-screen grid place-items-center bg-cream font-body p-3">
+      <article
+        class="grid grid-cols-1 font-medium max-w-xl rounded-lg bg-white overflow-clip text-dark-grayish-blue md:grid-cols-2">
+        <div>
+          <img
+            src="images/image-product-desktop.jpg"
+            alt="product desktop"
+            class="w-full h-60 object-cover md:h-full" />
+        </div>
+        <div class="p-8 grid space-y-5">
+          <p class="text-xs uppercase tracking-[0.3rem]">Perfume</p>
+          <h1
+            class="font-bold text-3xl leading-none font-display text-very-dark-blue">
+            Gabrielle Essence Eau De Parfum
+          </h1>
+          <p class="text-sm leading-relaxed">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
+          <div class="flex items-center gap-3">
+            <h2 class="font-bold text-3xl text-dark-cyan font-display">
+              $149.99
+            </h2>
+            <p class="text-xs"><s>$169.99</s></p>
+          </div>
+          <button
+            type="button"
+            class="bg-dark-cyan text-white rounded-lg py-3 text-sm font-semibold inline-flex justify-center gap-2 items-center transition-opacity hover:opacity-75">
+            <img src="images/icon-cart.svg" alt="cart icon" />
+            Add to Cart
+          </button>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

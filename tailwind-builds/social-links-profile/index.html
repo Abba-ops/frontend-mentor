@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social links profile</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            body: ["Inter", "serif"],
+          },
+          extend: {
+            colors: {
+              green: "hsl(75, 94%, 57%)",
+              white: "hsl(0, 0%, 100%)",
+              grey700: "hsl(0, 0%, 20%)",
+              grey800: "hsl(0, 0%, 12%)",
+              grey900: "hsl(0, 0%, 8%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main
+      class="min-h-screen flex justify-center items-center bg-grey900 text-[14px] font-body">
+      <article
+        class="bg-grey800 rounded-lg p-8 max-w-[21rem] w-full flex items-center flex-col text-white">
+        <img
+          alt="avatar jessica"
+          src="images/avatar-jessica.jpeg"
+          class="w-20 rounded-full mb-5" />
+        <h2 class="text-2xl font-semibold mb-2">Jessica Randall</h2>
+        <p class="text-green text-xs font-semibold">London, United Kingdom</p>
+        <p class="my-5 text-xs">"Front-end developer and avid reader."</p>
+        <section class="w-full space-y-4">
+          <a
+            href="index.html"
+            class="bg-grey700 text-xs block rounded text-center p-3 font-semibold transition-colors hover:bg-green hover:text-grey900"
+            >GitHub</a
+          >
+          <a
+            href="index.html"
+            class="bg-grey700 text-xs block rounded text-center p-3 font-semibold transition-colors hover:bg-green hover:text-grey900"
+            >Frontend Mentor</a
+          >
+          <a
+            href="index.html"
+            class="bg-grey700 text-xs block rounded text-center p-3 font-semibold transition-colors hover:bg-green hover:text-grey900"
+            >LinkedIn</a
+          >
+          <a
+            href="index.html"
+            class="bg-grey700 text-xs block rounded text-center p-3 font-semibold transition-colors hover:bg-green hover:text-grey900"
+            >Twitter</a
+          >
+          <a
+            href="index.html"
+            class="bg-grey700 text-xs block rounded text-center p-3 font-semibold transition-colors hover:bg-green hover:text-grey900"
+            >Instagram</a
+          >
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

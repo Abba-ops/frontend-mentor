@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <script src="script.js" defer></script>
+    <title>Rock, Paper, Scissors game</title>
+  </head>
+  <body>
+    <div class="overlay hidden">
+      <div class="rules">
+        <p class="rules__title">Rules</p>
+        <img
+          class="rules__close-icon"
+          src="images/icon-close.svg"
+          alt="Close" />
+        <img
+          class="rules__image"
+          src="images/image-rules.svg"
+          alt="Game Rules" />
+      </div>
+    </div>
+
+    <div class="game">
+      <div class="game__header">
+        <span class="game__title">Rock</span>
+        <span class="game__title">Paper</span>
+        <span class="game__title">Scissors</span>
+      </div>
+      <div class="game__score">
+        <p class="game__score-label">Score</p>
+        <p class="game__score-value">0</p>
+      </div>
+    </div>
+
+    <div class="game-content game-content--start">
+      <div class="game-content__option" data-choice="paper">
+        <img src="images/icon-paper.svg" alt="Paper" />
+      </div>
+      <div class="game-content__option" data-choice="scissors">
+        <img src="images/icon-scissors.svg" alt="Scissors" />
+      </div>
+      <div class="game-content__option" data-choice="rock">
+        <img src="images/icon-rock.svg" alt="Rock" />
+      </div>
+      <img
+        class="game-content__triangle"
+        src="images/bg-triangle.svg"
+        alt="Background Triangle" />
+    </div>
+
+    <button class="game__button game__button--rules">Rules</button>
+  </body>
+</html>

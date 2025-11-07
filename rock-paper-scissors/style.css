@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --gradient-paper: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --gradient-scissors: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --gradient-rock: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --color-text-dark: hsl(229, 25%, 31%);
+  --color-text-score: hsl(229, 64%, 46%);
+  --color-header-outline: hsl(217, 16%, 45%);
+  --gradient-radial-background: radial-gradient(
+    circle,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+  --bg-inner: white;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--gradient-radial-background);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  padding-inline: 1.5rem;
+}
+
+button {
+  text-transform: uppercase;
+  border: 0.1rem solid white;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: 0.1rem;
+  border-radius: 0.5rem;
+  display: block;
+  cursor: pointer;
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.15rem solid var(--color-header-outline);
+  border-radius: 0.85rem;
+  padding: clamp(0.85rem, 1.25vw, 1.25rem);
+  margin: clamp(1.5rem, 3vw, 3rem) auto;
+  max-width: 40rem;
+}
+
+.game__title {
+  line-height: 0.8;
+  font-size: clamp(1.35rem, 2.5vw, 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  color: white;
+}
+
+.game__score {
+  border-radius: 0.35rem;
+  text-align: center;
+  padding: 0.5rem clamp(1.5rem, 2.5vw, 2.5rem);
+  background-color: white;
+  font-weight: 700;
+}
+
+.game__score-label {
+  letter-spacing: 0.15rem;
+  color: var(--color-text-score);
+  font-size: clamp(0.65rem, 0.85vw, 0.85rem);
+  text-transform: uppercase;
+}
+
+.game__score-value {
+  font-size: clamp(2.5rem, 3vw, 3rem);
+  color: var(--color-text-dark);
+}
+
+.game-content--start {
+  max-width: fit-content;
+  position: relative;
+  margin-inline: auto;
+}
+
+.game-content__option {
+  cursor: pointer;
+  height: clamp(7.5rem, 10vw, 10rem);
+  width: clamp(7.5rem, 10vw, 10rem);
+  border-radius: 100vw;
+  padding: clamp(0.95rem, 1.25vw, 1.25rem);
+  background-color: var(--bg-inner);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.game-content--start .game-content__option {
+  position: absolute;
+}
+
+.game-content__option[data-choice="paper"] {
+  background-image: linear-gradient(var(--bg-inner), var(--bg-inner)),
+    var(--gradient-paper);
+  top: -4rem;
+  left: -4rem;
+}
+
+.game-content__option[data-choice="scissors"] {
+  background-image: linear-gradient(var(--bg-inner), var(--bg-inner)),
+    var(--gradient-scissors);
+  right: -4rem;
+  top: -4rem;
+}
+
+.game-content__option[data-choice="rock"] {
+  background-image: linear-gradient(var(--bg-inner), var(--bg-inner)),
+    var(--gradient-rock);
+  left: 50%;
+  bottom: 0;
+}
+
+.game-content--start .game-content__option[data-choice="rock"] {
+  transform: translateX(-50%);
+}
+
+.game-step {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin-inline: auto;
+}
+
+.game-step--player {
+  max-width: 40rem;
+}
+
+.game-step--result {
+  max-width: 55rem;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 3.5rem;
+}
+
+.game-content__player,
+.game-content__opponent {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.65rem, 3.5vw, 3.5rem);
+  align-items: center;
+  text-align: center;
+}
+
+.game-step--player .game-content__option--house {
+  background-color: rgba(20, 21, 57, 0.4);
+}
+
+.game-result {
+  display: grid;
+  justify-items: center;
+  justify-self: center;
+}
+
+.game-step--player .game-result {
+  display: none;
+}
+
+.game-content__label {
+  letter-spacing: 0.15rem;
+  font-size: clamp(0.85rem, 1.25vw, 1.25rem);
+  text-transform: uppercase;
+  color: white;
+}
+
+.game-result__text {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: white;
+  font-size: 3rem;
+}
+
+.game-result__button {
+  background-color: white;
+  color: var(--color-text-dark);
+  padding: 0.65rem 2.85rem;
+}
+
+.game__button--rules {
+  margin-left: auto;
+  padding: 0.5rem 2rem;
+  background: transparent;
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.rules {
+  display: grid;
+  background-color: var(--bg-inner);
+  grid-template-columns: repeat(2, 1fr);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  max-width: 90%;
+  border-radius: 0.5rem;
+  position: relative;
+  width: 25rem;
+}
+
+.rules__title {
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+  font-size: 1.65rem;
+  font-weight: 700;
+}
+
+.rules__close-icon {
+  justify-self: end;
+  cursor: pointer;
+}
+
+.rules__image {
+  display: block;
+  grid-column: span 2;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 48rem) {
+  .game-content__triangle {
+    max-width: 12rem;
+  }
+
+  .game-step {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .game-result {
+    grid-column: span 2;
+    justify-self: center;
+    grid-row: 2;
+  }
+
+  .game-content__player,
+  .game-content__opponent {
+    flex-direction: column-reverse;
+  }
+
+  .game__button--rules {
+    margin-inline: auto;
+  }
+
+  .rules {
+    max-width: none;
+    border-radius: unset;
+    grid-template-columns: 1fr;
+    height: 100vh;
+    max-height: none;
+    justify-items: center;
+    text-align: center;
+    width: 100vw;
+  }
+
+  .rules__close-icon {
+    justify-self: center;
+    grid-row: 3;
+  }
+}
+
+@media (min-width: 48rem) {
+  .game-step .game-content__option {
+    height: 17rem;
+    padding: 1.85rem;
+    width: 17rem;
+  }
+}

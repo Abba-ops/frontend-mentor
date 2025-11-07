@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huddle landing page with alternating feature blocks</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            body: ["Open Sans", "serif"],
+            display: ["Poppins", "serif"],
+          },
+          extend: {
+            colors: {
+              pink: "hsl(322, 100%, 66%)",
+              veryPaleCyan: "hsl(193, 100%, 96%)",
+              veryDarkCyan: "hsl(192, 100%, 9%)",
+              grayishBlue: "hsl(208, 11%, 55%)",
+            },
+            backgroundImage: {
+              "hero-desktop": "url('images/bg-hero-desktop.svg')",
+              "hero-mobile": "url('images/bg-hero-mobile.svg')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="text-[18px] font-body">
+    <header class="bg-hero-desktop bg-veryPaleCyan bg-cover bg-no-repeat">
+      <div class="max-w-screen-xl mx-auto px-4 py-8 text-veryDarkCyan md:py-16">
+        <nav class="flex justify-between items-center mb-16">
+          <img src="images/logo.svg" alt="logo" class="w-28 md:w-fit" />
+          <button
+            type="button"
+            class="bg-white rounded-full shadow-lg py-2 px-8 text-sm text-inherit font-semibold transition-opacity hover:opacity-70 md:py-3 md:px-14">
+            Try It Free
+          </button>
+        </nav>
+
+        <div
+          class="grid grid-cols-1 items-center gap-10 text-center md:text-start md:grid-cols-2">
+          <div>
+            <h1
+              class="text-3xl font-display font-bold leading-relaxed md:text-4xl md:max-w-md">
+              Build The Community Your Fans Will Love
+            </h1>
+            <p class="my-6 md:max-w-xl">
+              Huddle re-imagines the way we build communities. You have a voice,
+              but so does your audience. Create connections with your users as
+              you engage in genuine discussion.
+            </p>
+            <button
+              type="button"
+              class="bg-pink shadow-lg py-4 px-14 text-white text-sm rounded-full font-semibold transition-opacity hover:opacity-70">
+              Get Started For Free
+            </button>
+          </div>
+          <div>
+            <img
+              src="images/illustration-mockups.svg"
+              alt="mockups illustration" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="space-y-10 px-5 my-20 md:my-40">
+      <div
+        class="max-w-screen-xl mx-auto flex flex-col-reverse items-center gap-10 p-10 shadow-lg rounded-lg text-center md:p-20 md:text-start md:flex-row">
+        <div class="flex-1">
+          <h2 class="font-bold text-2xl text-veryDarkCyan mb-5 md:text-3xl">
+            Grow Together
+          </h2>
+          <p class="text-grayishBlue max-w-lg">
+            Generate meaningful discussions with your audience and build a
+            strong, loyal community. Think of the insightful conversations you
+            miss out on with a feedback form.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img
+            src="images/illustration-grow-together.svg"
+            alt="grow together illustration" />
+        </div>
+      </div>
+
+      <div
+        class="max-w-screen-xl mx-auto flex flex-col-reverse items-center gap-10 p-10 shadow-lg rounded-lg text-center md:p-20 md:text-start md:flex-row-reverse">
+        <div class="flex-1">
+          <h2 class="font-bold text-2xl text-veryDarkCyan mb-5 md:text-3xl">
+            Flowing Conversations
+          </h2>
+          <p class="text-grayishBlue max-w-lg">
+            You wouldn't paginate a conversation in real life, so why do it
+            online? Our threads have just-in-time loading for a more natural
+            flow.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img
+            src="images/illustration-flowing-conversation.svg"
+            alt="flowing conversation illustration" />
+        </div>
+      </div>
+
+      <div
+        class="max-w-screen-xl mx-auto flex flex-col-reverse items-center gap-10 p-10 shadow-lg rounded-lg text-center md:p-20 md:text-start md:flex-row">
+        <div class="flex-1">
+          <h2 class="font-bold text-2xl text-veryDarkCyan mb-5 md:text-3xl">
+            Your Users
+          </h2>
+          <p class="text-grayishBlue max-w-lg">
+            It takes no time at all to integrate Huddle with your app's
+            authentication solution. This means, once signed in to your app,
+            your users can start chatting immediately.
+          </p>
+        </div>
+        <div class="flex-1">
+          <img
+            src="images/illustration-your-users.svg"
+            alt="your users illustration" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-veryDarkCyan relative mt-72 md:mt-96">
+      <div
+        class="max-w-screen-xl mx-auto px-4 pt-40 pb-16 text-base text-white">
+        <div
+          class="bg-white max-w-3xl w-11/12 px-4 py-14 absolute -top-36 left-2/4 -translate-x-2/4 rounded-lg shadow-lg text-center md:w-full">
+          <h2
+            class="font-display font-semibold text-2xl text-veryDarkCyan mb-8 md:text-3xl">
+            Ready To Build Your Community?
+          </h2>
+          <button
+            type="button"
+            class="bg-pink px-20 py-5 text-white text-sm font-semibold shadow-lg rounded-full transition-opacity hover:opacity-70 md:text-base">
+            Get Started For Free
+          </button>
+        </div>
+        <img src="images/logo.svg" alt="logo" class="mb-10" />
+        <div
+          class="grid grid-cols-1 gap-10 mb-5 md:mb-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div class="space-y-4">
+            <div class="flex items-start gap-5">
+              <img src="images/icon-location.svg" alt="location icon" />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua
+              </p>
+            </div>
+            <div class="flex items-center gap-5">
+              <img src="images/icon-phone.svg" alt="phone icon" />
+              <p>+1-543-123-4567</p>
+            </div>
+            <div class="flex items-center gap-5">
+              <img src="images/icon-email.svg" alt="email icon" />
+              <p>example@huddle.com</p>
+            </div>
+          </div>
+          <ul class="space-y-4">
+            <li>
+              <a href="index.html" class="hover:underline">About Us</a>
+            </li>
+            <li>
+              <a href="index.html" class="hover:underline">What We Do</a>
+            </li>
+            <li>
+              <a href="index.html" class="hover:underline">FAQ</a>
+            </li>
+          </ul>
+          <ul class="space-y-4">
+            <li>
+              <a href="index.html" class="hover:underline">Career</a>
+            </li>
+            <li>
+              <a href="index.html" class="hover:underline">Blog</a>
+            </li>
+            <li>
+              <a href="index.html" class="hover:underline">Contact Us</a>
+            </li>
+          </ul>
+          <div class="space-x-2 mx-auto md:mx-0">
+            <i
+              class="bx bxl-facebook border p-1.5 rounded-full cursor-pointer transition-colors hover:text-pink hover:border-pink"></i>
+            <i
+              class="bx bxl-twitter border p-1.5 rounded-full cursor-pointer transition-colors hover:text-pink hover:border-pink"></i>
+            <i
+              class="bx bxl-instagram border p-1.5 rounded-full cursor-pointer transition-colors hover:text-pink hover:border-pink"></i>
+          </div>
+        </div>
+        <p class="text-xs flex justify-center md:justify-end">
+          &copy; Copyright 2018 Huddle. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

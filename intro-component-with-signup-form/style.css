@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-red: hsl(0, 100%, 74%);
+  --color-green: hsl(154, 59%, 51%);
+  --color-blue: hsl(248, 32%, 49%);
+  --color-dark-blue: hsl(249, 10%, 26%);
+  --color-grayish-blue: hsl(246, 25%, 77%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: url("images/bg-intro-desktop.png") var(--color-red);
+  background-size: contain;
+  font-family: "Poppins", serif;
+  padding-inline: 1.5rem;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  max-width: 75rem;
+  margin: clamp(4.5rem, 7vw, 7rem) auto;
+  gap: 4rem;
+}
+
+.intro > * {
+  flex: 1;
+}
+
+.intro__heading {
+  font-size: clamp(2rem, 3vw + 1rem, 3rem);
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+.intro__content {
+  color: white;
+}
+
+.intro__info {
+  background-color: var(--color-blue);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0.6rem rgba(100, 100, 111, 0.2);
+}
+
+.form {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  box-shadow: 0 0.6rem rgba(100, 100, 111, 0.2);
+}
+
+.form__input {
+  border: none;
+  width: 100%;
+  outline: thin solid var(--color-grayish-blue);
+  color: var(--color-dark-blue);
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+.form__input:is(:focus, :active) {
+  outline-color: var(--color-dark-blue);
+}
+
+.form__input.error {
+  outline-color: var(--color-red);
+  color: var(--color-red);
+}
+
+.form__error {
+  color: var(--color-red);
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  text-align: end;
+}
+
+.form__button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--color-green);
+  color: white;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-size: inherit;
+  text-transform: uppercase;
+  padding: 1rem;
+  transition: opacity 250ms;
+  border-bottom: 0.25rem solid hsl(154, 60%, 42%);
+}
+
+.form__button:hover {
+  opacity: 0.8;
+}
+
+.form__terms {
+  font-size: 0.7rem;
+  color: var(--color-grayish-blue);
+  text-align: center;
+}
+
+.form__link {
+  text-decoration: none;
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+@media (max-width: 40rem) {
+  .intro {
+    flex-direction: column;
+  }
+
+  .intro__content {
+    text-align: center;
+  }
+
+  .form {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h2 class="calculator__title">Spli <br />Tter</h2>
+      <div class="calculator">
+        <form class="calculator__form">
+          <div class="calculator__field">
+            <label for="bill" class="calculator__label">Bill</label>
+            <div class="calculator__input-wrapper">
+              <span class="calculator__icon">
+                <img alt="dollar icon" src="images/icon-dollar.svg" />
+              </span>
+              <input
+                id="bill"
+                type="text"
+                class="calculator__input"
+                placeholder="0" />
+            </div>
+          </div>
+
+          <div class="calculator__field">
+            <label class="calculator__label">Select Tip %</label>
+            <div class="calculator__tip-options">
+              <button type="button" class="calculator__tip-button" data-tip="5">
+                5%
+              </button>
+              <button
+                type="button"
+                class="calculator__tip-button"
+                data-tip="10">
+                10%
+              </button>
+              <button
+                type="button"
+                class="calculator__tip-button"
+                data-tip="15">
+                15%
+              </button>
+              <button
+                type="button"
+                class="calculator__tip-button"
+                data-tip="25">
+                25%
+              </button>
+              <button
+                type="button"
+                class="calculator__tip-button"
+                data-tip="50">
+                50%
+              </button>
+              <input
+                type="text"
+                class="calculator__tip-custom"
+                placeholder="Custom" />
+            </div>
+          </div>
+
+          <div class="calculator__field">
+            <label for="people" class="calculator__label">
+              Number of People
+              <span class="calculator__error-text">Can't be zero</span>
+            </label>
+            <div class="calculator__input-wrapper">
+              <span class="calculator__icon">
+                <img alt="person icon" src="images/icon-person.svg" />
+              </span>
+              <input
+                id="people"
+                type="text"
+                class="calculator__input"
+                placeholder="0" />
+            </div>
+          </div>
+        </form>
+
+        <div class="calculator__results">
+          <div class="calculator__results-group">
+            <div class="calculator__result-item">
+              <div class="calculator__result-label">
+                <h4 class="calculator__result-title">Tip Amount</h4>
+                <p class="calculator__result-subtitle">/ person</p>
+              </div>
+              <p class="calculator__result-value">$0.00</p>
+            </div>
+
+            <div class="calculator__result-item">
+              <div class="calculator__result-label">
+                <h4 class="calculator__result-title">Total</h4>
+                <p class="calculator__result-subtitle">/ person</p>
+              </div>
+              <p class="calculator__result-value">$0.00</p>
+            </div>
+          </div>
+          <button class="calculator__reset-button">Reset</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

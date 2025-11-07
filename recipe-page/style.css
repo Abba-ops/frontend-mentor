@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%);
+  --rose-50: hsl(330, 100%, 98%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--rose-50);
+  font-family: "Outfit", sans-serif;
+  color: var(--stone-600);
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  font-style: italic;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: var(--stone-900);
+  font-family: "Young Serif", serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h2 {
+  color: var(--brown-800);
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+
+h3 {
+  color: var(--rose-800);
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+
+.card {
+  max-width: 45rem;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  margin: 5rem auto;
+}
+
+.card__image {
+  padding: 2rem 2rem 0 2rem;
+}
+
+.card__content {
+  padding: 0 2rem 2rem 2rem;
+}
+
+.card__image img {
+  border-radius: 1rem;
+}
+
+.card__recipe {
+  margin: 1.5rem 0;
+}
+
+.card__preparation {
+  background-color: var(--rose-50);
+  border-radius: 0.625rem;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+}
+
+.card__content li {
+  margin-bottom: 1rem;
+}
+
+.card__content li:last-child {
+  margin-bottom: unset;
+}
+
+.card__content li::marker {
+  color: var(--rose-800);
+}
+
+.card__ingredients {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+}
+
+.card__instructions {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 2rem;
+  margin: 2rem 0;
+}
+
+.card__content table {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.card__content td {
+  border-bottom: 1px solid #eee;
+  padding: 1rem;
+}
+
+.card__nutrition--rose {
+  color: var(--brown-800);
+}
+
+@media (max-width: 48rem) {
+  .card {
+    border-radius: unset;
+    max-width: fit-content;
+    margin: unset;
+  }
+
+  .card__content h1 {
+    font-size: 2rem;
+    line-height: 1;
+  }
+
+  .card__image img {
+    border-radius: unset;
+  }
+
+  .card__image {
+    padding: unset;
+  }
+}

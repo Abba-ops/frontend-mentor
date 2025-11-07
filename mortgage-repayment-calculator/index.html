@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mortgage repayment calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <template id="results-template">
+      <div class="calculator__results">
+        <h3 class="calculator__results-title">Your results</h3>
+        <p class="calculator__results-text">
+          Your results are shown below based on the information you provided. To
+          adjust the results, edit the form and click “calculate repayments”
+          again.
+        </p>
+        <div class="calculator__summary">
+          <div class="calculator__summary-item">
+            <p class="calculator__results-text">Your monthly repayments</p>
+            <p class="calculator__summary-value">£0.00</p>
+          </div>
+          <div class="calculator__summary-item">
+            <p class="calculator__results-text">
+              Total you'll repay over the term
+            </p>
+            <p class="calculator__summary-total">£0.00</p>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="empty-template">
+      <div class="calculator__results">
+        <img
+          alt="empty illustration"
+          src="images/illustration-empty.svg"
+          class="calculator__empty-image" />
+        <h3 class="calculator__results-title">Results shown here</h3>
+        <p class="calculator__results-text">
+          Complete the form and click “calculate repayments” to see what your
+          monthly repayments would be.
+        </p>
+      </div>
+    </template>
+
+    <div class="calculator">
+      <form class="calculator__form">
+        <div class="calculator__header">
+          <h3 class="calculator__title">Mortgage Calculator</h3>
+          <button type="reset" class="calculator__reset-button">
+            Clear All
+          </button>
+        </div>
+
+        <div class="calculator__field">
+          <label for="amount" class="calculator__label">Mortgage Amount</label>
+          <div class="calculator__input-wrapper">
+            <input
+              id="amount"
+              type="text"
+              name="amount"
+              class="calculator__input" />
+            <span class="calculator__input-icon">£</span>
+          </div>
+          <p class="calculator__error-message" id="amount-error"></p>
+        </div>
+
+        <div class="calculator__group">
+          <div class="calculator__field">
+            <label for="term" class="calculator__label">Mortgage Term</label>
+            <div class="calculator__input-wrapper">
+              <input
+                id="term"
+                type="text"
+                name="term"
+                class="calculator__input" />
+              <span class="calculator__input-icon">years</span>
+            </div>
+            <p class="calculator__error-message" id="term-error"></p>
+          </div>
+
+          <div class="calculator__field">
+            <label for="rate" class="calculator__label">Interest Rate</label>
+            <div class="calculator__input-wrapper">
+              <input
+                id="rate"
+                type="text"
+                name="rate"
+                class="calculator__input" />
+              <span class="calculator__input-icon">%</span>
+            </div>
+            <p class="calculator__error-message" id="rate-error"></p>
+          </div>
+        </div>
+
+        <div class="calculator__field">
+          <label class="calculator__label">Mortgage Type</label>
+          <div class="calculator__radio-group">
+            <label class="calculator__radio">
+              <input
+                type="radio"
+                name="type"
+                id="repayment"
+                class="calculator__radio-input" />
+              <span class="calculator__radio-indicator"></span> Repayment
+            </label>
+            <label class="calculator__radio">
+              <input
+                type="radio"
+                name="type"
+                id="interest-only"
+                class="calculator__radio-input" />
+              <span class="calculator__radio-indicator"></span> Interest Only
+            </label>
+          </div>
+          <p class="calculator__error-message" id="type-error"></p>
+        </div>
+
+        <button type="submit" class="calculator__submit-button">
+          <img
+            alt="calculator icon"
+            src="images/icon-calculator.svg"
+            class="calculator__submit-icon" />
+          Calculate Repayments
+        </button>
+      </form>
+
+      <div class="calculator__results">
+        <img
+          alt="empty illustration"
+          src="images/illustration-empty.svg"
+          class="calculator__empty-image" />
+        <h3 class="calculator__results-title">Results shown here</h3>
+        <p class="calculator__results-text">
+          Complete the form and click “calculate repayments” to see what your
+          monthly repayments would be.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

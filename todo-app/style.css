@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --very-light-gray: hsl(0, 0%, 98%);
+  --very-light-grayish-blue: hsl(236, 33%, 92%);
+  --light-grayish-blue: hsl(233, 11%, 84%);
+  --dark-grayish-blue: hsl(236, 9%, 61%);
+  --very-dark-grayish-blue: hsl(235, 19%, 35%);
+  --color-bright-blue: hsl(220, 98%, 61%);
+  --color-check-background: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
+}
+
+[data-theme="dark"] {
+  --very-dark-blue: hsl(235, 21%, 11%);
+  --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+  --light-grayish-blue: hsl(234, 39%, 85%);
+  --light-grayish-blue-hover: hsl(236, 33%, 92%);
+  --dark-grayish-blue: hsl(234, 11%, 52%);
+  --very-dark-grayish-blue-1: hsl(233, 14%, 35%);
+  --very-dark-grayish-blue-2: hsl(237, 14%, 26%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.125rem;
+}
+
+[data-theme="light"] body {
+  background: url("images/bg-desktop-light.jpg") var(--very-light-gray)
+    no-repeat;
+  background-size: contain;
+}
+
+[data-theme="dark"] body {
+  background: url("images/bg-desktop-dark.jpg") var(--very-dark-blue) no-repeat;
+  background-size: contain;
+}
+
+ul {
+  list-style: none;
+}
+
+.todo-app {
+  padding-inline: 1.35rem;
+  margin: clamp(2.75rem, 4.75vw, 4.75rem) auto;
+  max-width: 35rem;
+}
+
+.todo-app__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.75rem;
+  align-items: center;
+}
+
+.todo-app__title {
+  text-transform: uppercase;
+  font-size: clamp(1.35rem, 2.35vw, 2.35rem);
+  letter-spacing: 0.65rem;
+  color: white;
+}
+
+.todo-app__theme-toggle {
+  cursor: pointer;
+}
+
+.todo-app__new {
+  margin-bottom: 1.5rem;
+  border-radius: 0.35rem;
+  display: flex;
+  padding: 1.25rem;
+  align-items: center;
+  padding-inline: 4rem;
+  position: relative;
+  gap: 1.35rem;
+}
+
+.todo-app__new::before {
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  border-radius: 100vw;
+  left: 1.5rem;
+}
+
+[data-theme="light"] .todo-app__new {
+  background-color: white;
+}
+
+[data-theme="dark"] .todo-app__new {
+  background-color: var(--very-dark-desaturated-blue);
+}
+
+[data-theme="light"] .todo-app__new::before {
+  border: thin solid var(--very-light-grayish-blue);
+}
+
+[data-theme="dark"] .todo-app__new::before {
+  border: thin solid var(--very-dark-grayish-blue-2);
+}
+
+.todo-app__input {
+  outline: none;
+  border: none;
+  font-family: inherit;
+  background: transparent;
+  font-size: inherit;
+  width: 100%;
+}
+
+.todo-app__input::placeholder {
+  color: var(--dark-grayish-blue);
+}
+
+[data-theme="light"] .todo-app__input {
+  color: var(--very-dark-blue);
+}
+
+[data-theme="dark"] .todo-app__input {
+  color: var(--very-light-grayish-blue);
+}
+
+.todo-app__list {
+  border-radius: 0.35rem;
+}
+
+.todo-list__empty {
+  padding: 1.5rem 4rem;
+  text-align: center;
+}
+
+[data-theme="light"] .todo-list__empty {
+  border-bottom: thin solid var(--very-light-grayish-blue);
+  color: var(--very-dark-grayish-blue);
+}
+
+[data-theme="dark"] .todo-list__empty {
+  border-bottom: thin solid var(--very-dark-grayish-blue);
+  color: var(--very-light-grayish-blue);
+}
+
+[data-theme="light"] .todo-app__list {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+
+[data-theme="dark"] .todo-app__list {
+  background-color: var(--very-dark-desaturated-blue);
+}
+
+.todo-list__item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1.5rem;
+  gap: 1.35rem;
+}
+
+[data-theme="light"] .todo-list__item {
+  border-bottom: thin solid var(--very-light-grayish-blue);
+  color: var(--very-dark-grayish-blue);
+}
+
+[data-theme="dark"] .todo-list__item {
+  border-bottom: thin solid var(--very-dark-grayish-blue);
+  color: var(--very-light-grayish-blue);
+}
+
+.todo-item__check {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100vw;
+  left: 1.5rem;
+}
+
+[data-theme="light"] .todo-item__check {
+  border: thin solid var(--very-light-grayish-blue);
+}
+
+[data-theme="dark"] .todo-item__check {
+  border: thin solid var(--very-dark-grayish-blue-2);
+}
+
+.todo-item__check:hover {
+  border-color: var(--color-check-background);
+}
+
+.todo__delete {
+  margin-left: auto;
+  display: none;
+}
+
+.todo-list__item:hover .todo__delete {
+  display: block;
+}
+
+.todo-list__item.done {
+  text-decoration: line-through;
+}
+
+[data-theme="light"] .todo-list__item.done {
+  color: var(--light-grayish-blue);
+}
+
+[data-theme="dark"] .todo-list__item.done {
+  color: var(--very-dark-grayish-blue-1);
+}
+
+.todo-list__item.done .todo-item__check {
+  display: inline-block;
+  background: url("images/icon-check.svg") center center no-repeat,
+    var(--color-check-background);
+}
+
+.todo-footer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--dark-grayish-blue);
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.85rem;
+}
+
+.todo-filters {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.todo-filters__item,
+.todo-footer__clear {
+  cursor: pointer;
+}
+
+.todo-filters__item.active {
+  color: var(--color-bright-blue);
+}
+
+.todo-filters--mobile {
+  font-size: 0.85rem;
+  display: none;
+  color: var(--dark-grayish-blue);
+  justify-content: center;
+  padding: 1.25rem;
+  margin-top: 1.5rem;
+  border-radius: 0.35rem;
+  gap: 1.25rem;
+}
+
+[data-theme="light"] .todo-filters--mobile {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: white;
+}
+
+[data-theme="dark"] .todo-filters--mobile {
+  background-color: var(--very-dark-desaturated-blue);
+}
+
+.todo-app__drag-note {
+  text-align: center;
+  color: var(--dark-grayish-blue);
+  margin-top: clamp(2.35rem, 3.35vw, 3.35rem);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 40rem) {
+  body {
+    font-size: 0.85rem;
+  }
+
+  [data-theme="light"] body {
+    background-image: url("images/bg-mobile-light.jpg");
+  }
+
+  [data-theme="dark"] body {
+    background-image: url("images/bg-mobile-dark.jpg");
+  }
+
+  .todo-filters {
+    display: none;
+  }
+
+  .todo-filters--mobile {
+    display: flex;
+  }
+}

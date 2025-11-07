@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Calculator app</title>
+  </head>
+  <body data-theme="theme1">
+    <main class="calculator">
+      <header class="calculator__header">
+        <h1 class="calculator__logo">calc</h1>
+        <div class="calculator__theme-switch">
+          <span class="calculator__theme-label">theme</span>
+          <div class="calculator__switch switch">
+            <div class="switch__labels">
+              <span>1</span>
+              <span>2</span>
+              <span>3</span>
+            </div>
+            <div class="switch__track">
+              <input
+                type="radio"
+                name="theme"
+                id="theme1"
+                value="theme1"
+                checked />
+              <input type="radio" name="theme" id="theme2" value="theme2" />
+              <input type="radio" name="theme" id="theme3" value="theme3" />
+              <div class="switch__thumb"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="calculator__screen"></section>
+
+      <section class="calculator__keypad">
+        <button class="keypad__key" data-value="7">7</button>
+        <button class="keypad__key" data-value="8">8</button>
+        <button class="keypad__key" data-value="9">9</button>
+        <button class="keypad__key keypad__key--action" data-value="DEL">
+          DEL
+        </button>
+
+        <button class="keypad__key" data-value="4">4</button>
+        <button class="keypad__key" data-value="5">5</button>
+        <button class="keypad__key" data-value="6">6</button>
+        <button class="keypad__key" data-value="+">+</button>
+
+        <button class="keypad__key" data-value="1">1</button>
+        <button class="keypad__key" data-value="2">2</button>
+        <button class="keypad__key" data-value="3">3</button>
+        <button class="keypad__key" data-value="-">−</button>
+
+        <button class="keypad__key" data-value=".">.</button>
+        <button class="keypad__key" data-value="0">0</button>
+        <button class="keypad__key" data-value="/">÷</button>
+        <button class="keypad__key" data-value="*">×</button>
+
+        <button class="keypad__key keypad__key--reset" data-value="RESET">
+          RESET
+        </button>
+        <button class="keypad__key keypad__key--equals" data-value="=">
+          =
+        </button>
+      </section>
+    </main>
+  </body>
+</html>

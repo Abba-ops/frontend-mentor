@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agency landing page</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+      rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            body: ["Barlow", "serif"],
+            display: ["Fraunces", "serif"],
+          },
+          extend: {
+            colors: {
+              softRed: "hsl(7, 99%, 70%)",
+              yellow: "hsl(51, 100%, 49%)",
+              darkDesaturatedCyan: "hsl(167, 40%, 24%)",
+              darkBlue: "hsl(198, 62%, 26%)",
+              darkModerateCyan: "hsl(168, 34%, 41%)",
+              veryDarkDesaturatedBlue: "hsl(212, 27%, 19%)",
+              veryDarkGrayishBlue: "hsl(213, 9%, 39%)",
+              darkGrayishBlue: "hsl(232, 10%, 55%)",
+              grayishBlue: "hsl(210, 4%, 67%)",
+              white: "hsl(0, 0%, 100%)",
+            },
+            backgroundImage: {
+              "hero-pattern": "url('images/desktop/image-header.jpg')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-body text-[18px]">
+    <header
+      class="bg-hero-pattern relative bg-cover min-h-screen bg-no-repeat bg-center">
+      <nav class="p-8 flex items-center justify-between md:p-10">
+        <img src="images/logo.svg" alt="logo" class="md:w-40" />
+        <ul
+          class="hero__menu hidden bg-white w-10/12 py-10 absolute top-28 left-1/2 translate-x-[-50%] flex-col items-center gap-8 md:gap-14 md:bg-inherit md:flex md:flex-row md:translate-x-0 md:left-auto md:p-0 md:w-fit md:static">
+          <li>
+            <a
+              href="index.html"
+              class="text-darkGrayishBlue font-medium md:text-white"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html"
+              class="text-darkGrayishBlue font-medium md:text-white"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html"
+              class="text-darkGrayishBlue font-medium md:text-white"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="index.html"
+              class="bg-yellow py-5 px-8 uppercase font-bold font-display text-base text-veryDarkDesaturatedBlue rounded-full transition-all hover:bg-opacity-40 hover:text-darkBlue md:hover:text-white md:bg-white"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <img
+          alt="icon"
+          src="images/icon-hamburger.svg"
+          class="hero__icon block md:hidden" />
+      </nav>
+      <h1
+        class="text-white tracking-widest text-5xl font-display uppercase font-bold text-center mt-20 md:text-7xl">
+        We are creatives
+      </h1>
+    </header>
+
+    <section class="grid grid-cols-1 md:grid-cols-2">
+      <div
+        class="max-w-[80%] py-16 text-center justify-self-center self-center md:text-start md:py-0 md:max-w-md">
+        <h2
+          class="text-3xl text-veryDarkDesaturatedBlue font-bold font-display md:text-5xl">
+          Transform your brand
+        </h2>
+        <p class="text-darkGrayishBlue my-10 font-medium">
+          We are a full-service creative agency specializing in helping brands
+          grow fast. Engage your clients through compelling visuals that do most
+          of the marketing for you.
+        </p>
+        <a
+          href="index.html"
+          class="uppercase relative text-base text-veryDarkDesaturatedBlue font-bold font-display after:bg-yellow after:absolute after:inset-x-0 after:bottom-0 after:h-2 after:bg-opacity-50 after:z-[-1] after:rounded-full hover:after:bg-opacity-100 after:transition-all after:w-[120%] after:translate-x-[-50%] after:left-[50%]"
+          >Learn more</a
+        >
+      </div>
+      <div class="row-start-1 md:row-start-auto">
+        <img
+          alt="transform"
+          src="images/desktop/image-transform.jpg"
+          class="w-full h-full" />
+      </div>
+
+      <div>
+        <img
+          alt="stand out"
+          src="images/desktop/image-stand-out.jpg"
+          class="w-full h-full" />
+      </div>
+      <div
+        class="max-w-[80%] py-16 text-center justify-self-center self-center md:text-start md:py-0 md:max-w-md">
+        <h2
+          class="text-3xl text-veryDarkDesaturatedBlue font-bold font-display md:text-5xl">
+          Stand out to the right audience
+        </h2>
+        <p class="text-darkGrayishBlue my-10 font-medium">
+          Using a collaborative formula of designers, researchers,
+          photographers, videographers, and copywriters, we’ll build and extend
+          your brand in digital places.
+        </p>
+        <a
+          href="index.html"
+          class="uppercase relative text-base text-veryDarkDesaturatedBlue font-bold font-display after:bg-softRed after:absolute after:inset-x-0 after:bottom-0 after:h-2 after:bg-opacity-50 after:z-[-1] after:rounded-full hover:after:bg-opacity-100 after:transition-all after:w-[120%] after:translate-x-[-50%] after:left-[50%]"
+          >Learn more</a
+        >
+      </div>
+
+      <div class="relative text-center min-h-[40rem] md:min-h-fit">
+        <img
+          alt="graphic design"
+          src="images/desktop/image-graphic-design.jpg"
+          class="w-full h-full object-cover" />
+        <div
+          class="absolute bottom-16 w-full max-w-xs left-2/4 -translate-x-2/4 md:max-w-sm">
+          <h2
+            class="text-2xl capitalize font-display font-extrabold text-darkDesaturatedCyan mb-8 md:text-3xl">
+            Graphic design
+          </h2>
+          <p class="text-darkDesaturatedCyan font-medium">
+            Great design makes you memorable. We deliver artwork that
+            underscores your brand message and captures potential clients’
+            attention.
+          </p>
+        </div>
+      </div>
+      <div class="relative text-center min-h-[40rem] md:min-h-fit">
+        <img
+          alt="photography"
+          src="images/desktop/image-photography.jpg"
+          class="w-full h-full object-cover" />
+        <div
+          class="absolute bottom-16 w-full max-w-xs left-2/4 -translate-x-2/4 md:max-w-sm">
+          <h2
+            class="text-2xl capitalize font-display font-extrabold text-darkBlue mb-8 md:text-3xl">
+            Photography
+          </h2>
+          <p class="text-darkBlue font-medium">
+            Increase your credibility by getting the most stunning, high-quality
+            photos that improve your business image.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-40">
+      <h4
+        class="text-center tracking-widest uppercase mb-20 font-display text-grayishBlue font-bold md:text-xl">
+        Client testimonials
+      </h4>
+      <div
+        class="gap-10 grid grid-cols-1 mx-auto max-w-screen-xl px-8 text-center md:grid-cols-3">
+        <article>
+          <img
+            alt="emily"
+            src="images/image-emily.jpg"
+            class="max-w-16 rounded-full mx-auto" />
+          <p class="my-16 text-darkGrayishBlue leading-relaxed font-medium">
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <div>
+            <h4
+              class="font-bold font-display text-veryDarkDesaturatedBlue mb-2">
+              Emily R.
+            </h4>
+            <span class="text-grayishBlue text-sm font-medium"
+              >Marketing Director</span
+            >
+          </div>
+        </article>
+        <article>
+          <img
+            alt="thomas"
+            src="images/image-thomas.jpg"
+            class="max-w-16 rounded-full mx-auto" />
+          <p class="my-16 text-darkGrayishBlue leading-relaxed font-medium">
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <div>
+            <h4
+              class="font-bold font-display text-veryDarkDesaturatedBlue mb-2">
+              Thomas Smith
+            </h4>
+            <span class="text-grayishBlue text-sm font-medium"
+              >Chief Operations Officer</span
+            >
+          </div>
+        </article>
+        <article>
+          <img
+            alt="jennie"
+            src="images/image-jennie.jpg"
+            class="max-w-16 rounded-full mx-auto" />
+          <p class="my-16 text-darkGrayishBlue leading-relaxed font-medium">
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <div>
+            <h4
+              class="font-bold font-display text-veryDarkDesaturatedBlue mb-2">
+              Jennie Lee
+            </h4>
+            <span class="text-grayishBlue text-sm font-medium"
+              >Business Owner</span
+            >
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-2 md:grid-cols-4">
+      <img
+        src="images/desktop/image-gallery-milkbottles.jpg"
+        alt="gallery milkbottles"
+        class="w-full h-full" />
+      <img
+        src="images/desktop/image-gallery-orange.jpg"
+        alt="gallery orange"
+        class="w-full h-full" />
+      <img
+        src="images/desktop/image-gallery-cone.jpg"
+        alt="gallery cone"
+        class="w-full h-full" />
+      <img
+        src="images/desktop/image-gallery-sugarcubes.jpg"
+        alt="gallery sugarcubes"
+        class="w-full h-full" />
+    </section>
+
+    <footer class="bg-darkModerateCyan flex flex-col items-center py-16">
+      <img src="images/logo.svg" alt="logo" class="mb-8 md:w-40" />
+      <ul class="flex items-center gap-14 mb-20">
+        <li>
+          <a
+            href="index.html"
+            class="text-darkDesaturatedCyan font-medium transition-colors hover:text-white"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="index.html"
+            class="text-darkDesaturatedCyan font-medium transition-colors hover:text-white"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            href="index.html"
+            class="text-darkDesaturatedCyan font-medium transition-colors hover:text-white"
+            >Projects</a
+          >
+        </li>
+      </ul>
+      <div class="flex items-center gap-5">
+        <img alt="facebook icon" src="images/icon-facebook.svg" />
+        <img alt="instagram icon" src="images/icon-instagram.svg" />
+        <img alt="twitter icon" src="images/icon-twitter.svg" />
+        <img alt="pinterest icon" src="images/icon-pinterest.svg" />
+      </div>
+    </footer>
+  </body>
+</html>

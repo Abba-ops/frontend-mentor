@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <form class="form">
+      <h2 class="form__heading">Contact Us</h2>
+      <div class="form__group">
+        <div>
+          <label for="firstname" class="form__label"> First Name </label>
+          <input
+            type="text"
+            id="firstname"
+            name="firstname"
+            class="form__input" />
+          <p id="firstname-error" class="form__error"></p>
+        </div>
+        <div>
+          <label for="lastname" class="form__label"> Last Name </label>
+          <input
+            type="text"
+            id="lastname"
+            name="lastname"
+            class="form__input" />
+          <p id="lastname-error" class="form__error"></p>
+        </div>
+      </div>
+      <div>
+        <label for="email" class="form__label"> Email Address </label>
+        <input type="email" name="email" id="email" class="form__input" />
+        <p id="email-error" class="form__error"></p>
+      </div>
+      <div>
+        <label class="form__label"> Query Type </label>
+        <div class="form__group">
+          <label class="form__radio">
+            <input type="radio" name="request" id="request" />
+            <span></span> General Enquiry
+          </label>
+          <label class="form__radio">
+            <input type="radio" name="request" id="request" />
+            <span></span> Support Request
+          </label>
+        </div>
+        <p id="request-error" class="form__error"></p>
+      </div>
+      <div>
+        <label for="message" class="form__label"> Message </label>
+        <textarea name="message" id="message" rows="4"></textarea>
+        <p id="message-error" class="form__error"></p>
+      </div>
+      <label class="form__terms" for="terms">
+        <input type="checkbox" id="terms" name="terms" />
+        <span></span> I consent to being contacted by the team
+      </label>
+      <p id="terms-error" class="form__error"></p>
+      <button class="form__btn" type="submit">Submit</button>
+    </form>
+
+    <div class="form__success">
+      <h3 class="form__success-heading">
+        <img
+          alt="success icon check"
+          src="images/icon-success-check.svg"
+          class="form__success-icon" />
+        Message Sent!
+      </h3>
+      <p class="form__success-message">
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
+    </div>
+  </body>
+</html>

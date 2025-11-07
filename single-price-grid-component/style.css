@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --base-font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--light-gray);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  font-style: italic;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 43.75rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0rem 0.5rem 1.5rem;
+  margin: 5rem 1rem;
+}
+
+.grid__intro {
+  grid-column: span 2;
+  background-color: white;
+  border-radius: 0.625rem 0.625rem 0 0;
+  padding: 2.5rem;
+}
+
+.grid__title {
+  color: var(--cyan);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.grid__subtitle {
+  color: var(--bright-yellow);
+  margin-bottom: 1rem;
+}
+
+.grid__description {
+  color: var(--grayish-blue);
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.grid__subscription {
+  display: grid;
+  background-color: var(--cyan);
+  border-bottom-left-radius: 0.625rem;
+  color: var(--light-gray);
+  padding: 2.5rem;
+}
+
+.grid__subscription-title {
+  margin-bottom: 1.5rem;
+}
+
+.grid__price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.grid__price-value {
+  font-size: 2rem;
+  color: white;
+}
+
+.grid__price-period {
+  opacity: 0.5;
+}
+
+.grid__button {
+  margin-top: 2rem;
+  border-radius: 0.3125rem;
+  background-color: var(--bright-yellow);
+  border: none;
+  padding: 1rem;
+  font-weight: 700;
+  font-family: inherit;
+  color: white;
+  font-size: inherit;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.4375rem 1.8125rem 0rem;
+  transition: opacity 250ms;
+}
+
+.grid__button:hover {
+  opacity: 0.8;
+}
+
+.grid__features {
+  background-color: hsl(179, 42%, 54%);
+  border-bottom-right-radius: 0.625rem;
+  padding: 2.5rem;
+}
+
+.grid__features-title {
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.grid__features-list {
+  color: var(--light-gray);
+  line-height: 1.5;
+}
+
+@media (max-width: 35.5rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid__intro {
+    grid-column: 1;
+    padding: 1.875rem;
+  }
+
+  .grid__subscription {
+    border-bottom-left-radius: unset;
+    padding: 1.875rem;
+  }
+
+  .grid__features {
+    border-radius: 0 0 0.625rem 0.625rem;
+    padding: 1.875rem;
+  }
+}

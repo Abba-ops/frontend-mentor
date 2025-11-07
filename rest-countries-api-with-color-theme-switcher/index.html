@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries API with color theme switcher</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h2 class="header__title">Where in the World?</h2>
+        <button class="header__theme-toggle">
+          <i class="bx bx-moon"></i>
+          Dark Mode
+        </button>
+      </div>
+    </header>
+
+    <main class="main container">
+      <section class="controls">
+        <div class="controls__search">
+          <i class="bx bx-search-alt-2"></i>
+          <input
+            type="search"
+            class="controls__input"
+            oninput="handleSearch(event)"
+            placeholder="Search for a country" />
+        </div>
+
+        <div class="controls__filter">
+          <select class="controls__select" onchange="handleRegionFilter(event)">
+            <option value="">Filter by Region</option>
+            <option value="africa">Africa</option>
+            <option value="america">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="countries"></section>
+    </main>
+  </body>
+</html>

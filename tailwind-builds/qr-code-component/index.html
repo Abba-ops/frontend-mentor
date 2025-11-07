@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR code component</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            body: ["Outfit", "serif"],
+          },
+          extend: {
+            colors: {
+              white: "hsl(0, 0%, 100%)",
+              slate300: "hsl(212, 45%, 89%)",
+              slate500: "hsl(216, 15%, 48%)",
+              slate900: "hsl(218, 44%, 22%)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <main
+      class="text-[0.9375rem] min-h-screen flex justify-center items-center bg-slate300 font-body">
+      <article class="max-w-[19rem] bg-white p-4 rounded-2xl">
+        <img
+          alt="qr code image"
+          src="images/image-qr-code.png"
+          class="rounded-lg" />
+        <section class="p-5 text-center">
+          <h1 class="text-xl text-slate900 font-bold mb-3">
+            Improve your front-end skills by building projects
+          </h1>
+          <p class="text-slate500">
+            Scan the QR code to visit Frontend Mentor and take your coding
+            skills to the next level
+          </p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

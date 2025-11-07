@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --light-pink: hsl(321, 100%, 78%);
+  --light-red: hsl(0, 100%, 63%);
+  --very-dark-cyan: hsl(192, 100%, 9%);
+  --very-pale-blue: hsl(207, 100%, 98%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  font-style: italic;
+  height: auto;
+}
+
+body {
+  font-family: "Open Sans", serif;
+}
+
+h1,
+h2 {
+  color: var(--very-dark-cyan);
+  font-family: "Poppins", serif;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.5;
+  max-width: 55ch;
+}
+
+.container {
+  max-width: 80rem;
+  padding-inline: 1rem;
+  margin: auto;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 100vw;
+  transition: opacity 250ms;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.btn-primary {
+  background-color: var(--pink);
+  color: white;
+  padding: clamp(0.85rem, 1vw + 0.35rem, 1.35rem)
+    clamp(3rem, 5vw + 0.35rem, 5rem);
+  font-size: inherit;
+}
+
+.heading-primary {
+  font-size: clamp(1rem, 2.5vw + 0.75rem, 2.25rem);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 5rem;
+}
+
+.nav__btn {
+  background: transparent;
+  text-transform: capitalize;
+  padding: clamp(0.3rem, 0.5vw + 0.3rem, 0.6rem)
+    clamp(1.5rem, 2vw + 0.5rem, 2rem);
+  border: thin solid var(--pink);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: var(--pink);
+}
+
+.header__content {
+  margin-block: 5rem;
+  text-align: center;
+}
+
+.header__description {
+  color: var(--very-dark-cyan);
+  margin: 2rem auto;
+}
+
+.stats.container {
+  display: grid;
+  justify-content: center;
+}
+
+.stats__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 5rem;
+  gap: 5rem;
+}
+
+.stats__item {
+  justify-self: center;
+}
+
+.stats__icon {
+  max-width: 2rem;
+}
+
+.stats__number {
+  font-size: clamp(3rem, 4vw + 1rem, 5rem);
+}
+
+.stats__label {
+  font-size: clamp(0.875rem, 1.2vw + 0.5rem, 1.25rem);
+  color: hsl(0, 0%, 45%);
+}
+
+.feature {
+  margin-block: 5rem;
+}
+
+.feature--grow,
+.feature--users {
+  background-color: #f6fbff;
+}
+
+.feature .container {
+  display: flex;
+  align-items: center;
+  padding-block: 5rem;
+  color: var(--very-dark-cyan);
+  gap: 5rem;
+}
+
+.feature .container > * {
+  flex: 1;
+}
+
+.feature--conversation .container {
+  flex-direction: row-reverse;
+}
+
+.feature__title {
+  font-size: clamp(1.125rem, 1.8vw + 0.875rem, 1.875rem);
+  margin-bottom: 1rem;
+}
+
+.cta.container {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding-block: 5rem;
+  gap: 1.5rem;
+}
+
+.footer {
+  background-color: var(--very-dark-cyan);
+  padding-block: 5rem;
+  color: white;
+}
+
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.footer__info > * + *,
+.footer__newsletter > * + * {
+  margin-top: 1rem;
+}
+
+.footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__title {
+  text-transform: uppercase;
+  color: white;
+}
+
+.footer__form {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__input {
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.85rem;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+}
+
+.footer__btn {
+  padding: 0.85rem 2rem;
+  border-radius: 0.3rem;
+  background-color: var(--pink);
+  color: white;
+}
+
+@media (max-width: 40rem) {
+  .nav {
+    margin-block: 2rem;
+  }
+
+  .nav__logo {
+    max-width: 8rem;
+  }
+
+  .stats__list {
+    grid-template-columns: 1fr;
+  }
+
+  .feature .container {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .footer .container {
+    flex-direction: column-reverse;
+  }
+
+  .footer__logo {
+    max-width: 12rem;
+  }
+
+  .footer__form {
+    flex-direction: column;
+    align-items: end;
+  }
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clipboard landing page</title>
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            body: ["Bai Jamjuree", "serif"],
+          },
+          extend: {
+            colors: {
+              strongCyan: "hsl(171, 66%, 44%)",
+              lightBlue: "hsl(233, 100%, 69%)",
+              darkGrayishBlue: "hsl(210, 10%, 33%)",
+              grayishBlue: "hsl(201, 11%, 66%)",
+            },
+            backgroundImage: {
+              "header-desktop": "url('images/bg-header-desktop.png')",
+              "header-mobile": "url('images/bg-header-mobile.png')",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-body text-[18px]">
+    <header
+      class="bg-header-mobile bg-cover bg-center bg-no-repeat px-7 md:bg-header-desktop">
+      <div class="max-w-xl mx-auto text-center pt-28">
+        <img src="images/logo.svg" alt="logo" class="mx-auto mb-10" />
+        <h1
+          class="mb-4 font-semibold text-darkGrayishBlue text-3xl md:text-4xl">
+          A history of everything you copy
+        </h1>
+        <p class="text-grayishBlue mb-10">
+          Clipboard allows you to track and organize everything you copy.
+          Instantly access your clipboard on all your devices.
+        </p>
+        <div class="flex flex-col justify-center gap-5 md:flex-row">
+          <button
+            type="button"
+            class="bg-strongCyan py-3.5 px-9 rounded-full shadow-lg text-white transition-opacity hover:opacity-75">
+            Download for iOS
+          </button>
+          <button
+            type="button"
+            class="bg-lightBlue py-3.5 px-9 rounded-full shadow-lg text-white transition-opacity hover:opacity-75">
+            Download for Mac
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="my-32 px-7">
+      <header class="max-w-2xl mx-auto mb-16 text-center">
+        <h2 class="mb-4 font-semibold text-darkGrayishBlue text-3xl">
+          Keep track of your snippets
+        </h2>
+        <p class="text-grayishBlue">
+          Clipboard instantly stores any item you copy in the cloud, meaning you
+          can access your snippets immediately on all your devices. Our Mac and
+          iOS apps will help you organize everything.
+        </p>
+      </header>
+
+      <div
+        class="grid grid-cols-1 gap-10 items-center text-center md:text-start md:grid-cols-2">
+        <div class="translate-x-0 md:-translate-x-16">
+          <img
+            alt="computer"
+            src="images/image-computer.png"
+            class="w-full h-full" />
+        </div>
+        <div class="space-y-14">
+          <div>
+            <h3 class="font-semibold text-darkGrayishBlue text-2xl mb-2">
+              Quick Search
+            </h3>
+            <p class="text-grayishBlue md:max-w-sm">
+              Easily search your snippets by content, category, web address,
+              application, and more.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-darkGrayishBlue text-2xl mb-2">
+              iCloud Sync
+            </h3>
+            <p class="text-grayishBlue md:max-w-sm">
+              Instantly saves and syncs snippets across all your devices.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-darkGrayishBlue text-2xl mb-2">
+              Complete History
+            </h3>
+            <p class="text-grayishBlue md:max-w-sm">
+              Retrieve any snippets from the first moment you started using the
+              app.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-32 px-7">
+      <header class="max-w-2xl mx-auto mb-16 text-center">
+        <h2 class="mb-4 font-semibold text-darkGrayishBlue text-3xl">
+          Access Clipboard anywhere
+        </h2>
+        <p class="text-grayishBlue">
+          Whether you’re on the go, or at your computer, you can access all your
+          Clipboard snippets in a few simple clicks.
+        </p>
+      </header>
+
+      <div>
+        <img src="images/image-devices.png" alt="devices" class="mx-auto" />
+      </div>
+    </section>
+
+    <section class="my-32 px-7">
+      <header class="max-w-2xl mx-auto mb-16 text-center">
+        <h2 class="mb-4 font-semibold text-darkGrayishBlue text-3xl">
+          Supercharge your workflow
+        </h2>
+        <p class="text-grayishBlue">
+          We’ve got the tools to boost your productivity.
+        </p>
+      </header>
+
+      <div
+        class="grid grid-cols-1 gap-10 items-center max-w-screen-xl mx-auto text-center md:grid-cols-3">
+        <div>
+          <img
+            alt="blacklist icon"
+            src="images/icon-blacklist.svg"
+            class="mx-auto" />
+          <h3 class="font-semibold text-darkGrayishBlue text-2xl my-5">
+            Create blacklists
+          </h3>
+          <p class="text-grayishBlue">
+            Ensure sensitive information never makes its way to your clipboard
+            by excluding certain sources.
+          </p>
+        </div>
+        <div>
+          <img src="images/icon-text.svg" alt="text icon" class="mx-auto" />
+          <h3 class="font-semibold text-darkGrayishBlue text-2xl my-5">
+            Plain text snippets
+          </h3>
+          <p class="text-grayishBlue">
+            Remove unwanted formatting from copied text for a consistent look.
+          </p>
+        </div>
+        <div>
+          <img
+            alt="preview icon"
+            src="images/icon-preview.svg"
+            class="mx-auto" />
+          <h3 class="font-semibold text-darkGrayishBlue text-2xl my-5">
+            Sneak preview
+          </h3>
+          <p class="text-grayishBlue">
+            Quick preview of all snippets on your Clipboard for easy access.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="grid grid-cols-1 gap-20 justify-items-center max-w-screen-xl mx-auto mt-40 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+        <img src="images/logo-google.png" alt="google logo" />
+        <img src="images/logo-ibm.png" alt="ibm logo" />
+        <img src="images/logo-microsoft.png" alt="microsoft logo" />
+        <img src="images/logo-hp.png" alt="hp logo" />
+        <img src="images/logo-vector-graphics.png" alt="vector graphics logo" />
+      </div>
+    </section>
+
+    <section class="my-32 px-7">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2
+          class="mb-4 font-semibold text-darkGrayishBlue text-3xl md:text-4xl">
+          Clipboard for iOS and Mac OS
+        </h2>
+        <p class="text-grayishBlue mb-10">
+          Available for free on the App Store. Download for Mac or iOS, sync
+          with iCloud and you’re ready to start adding to your clipboard.
+        </p>
+        <div class="flex flex-col justify-center gap-5 md:flex-row">
+          <button
+            type="button"
+            class="bg-strongCyan py-3.5 px-9 rounded-full shadow-lg text-white transition-opacity hover:opacity-75">
+            Download for iOS
+          </button>
+          <button
+            type="button"
+            class="bg-lightBlue py-3.5 px-9 rounded-full shadow-lg text-white transition-opacity hover:opacity-75">
+            Download for Mac
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-slate-100 py-10">
+      <div class="max-w-screen-xl mx-auto">
+        <div
+          class="grid grid-cols-1 gap-10 justify-items-center text-center md:text-start md:grid-cols-6">
+          <img src="images/logo.svg" alt="logo" class="w-14" />
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="index.html"
+                class="transition-colors text-grayishBlue hover:text-strongCyan"
+                >FAQs</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="transition-colors text-grayishBlue hover:text-strongCyan"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="index.html"
+                class="transition-colors text-grayishBlue hover:text-strongCyan"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                href="index.html"
+                class="transition-colors text-grayishBlue hover:text-strongCyan"
+                >Press Kit</a
+              >
+            </li>
+          </ul>
+          <ul class="space-y-4">
+            <li>
+              <a
+                href="index.html"
+                class="transition-colors text-grayishBlue hover:text-strongCyan"
+                >Install Guide</a
+              >
+            </li>
+          </ul>
+          <div class="flex items-center gap-5 md:col-start-5 md:col-end-7">
+            <img src="images/icon-facebook.svg" alt="facebook logo" />
+            <img src="images/icon-twitter.svg" alt="twitter logo" />
+            <img src="images/icon-instagram.svg" alt="instagram logo" />
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

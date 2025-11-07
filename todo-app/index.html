@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="todo-app">
+      <header class="todo-app__header">
+        <h1 class="todo-app__title">Todo</h1>
+        <img
+          src="images/icon-moon.svg"
+          class="todo-app__theme-toggle"
+          alt="theme toggle" />
+      </header>
+
+      <section class="todo-app__new">
+        <input
+          type="text"
+          class="todo-app__input"
+          placeholder="Create a new todo..." />
+      </section>
+
+      <section class="todo-app__list">
+        <div class="todo-list">
+          <div class="todo-list__empty">No todos found</div>
+        </div>
+        <footer class="todo-footer">
+          <span class="todo-footer__count">0 items left</span>
+          <ul class="todo-filters">
+            <li
+              class="todo-filters__item active"
+              onclick="filterListItems(event)">
+              All
+            </li>
+            <li class="todo-filters__item" onclick="filterListItems(event)">
+              Active
+            </li>
+            <li class="todo-filters__item" onclick="filterListItems(event)">
+              Completed
+            </li>
+          </ul>
+          <span class="todo-footer__clear">Clear Completed</span>
+        </footer>
+      </section>
+      <ul class="todo-filters--mobile">
+        <li class="todo-filters__item" onclick="filterListItems(event)">All</li>
+        <li class="todo-filters__item" onclick="filterListItems(event)">
+          Active
+        </li>
+        <li class="todo-filters__item" onclick="filterListItems(event)">
+          Completed
+        </li>
+      </ul>
+      <p class="todo-app__drag-note">Drag and drop to reorder list</p>
+    </main>
+  </body>
+</html>

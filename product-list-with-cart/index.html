@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product list with cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <template id="item-template">
+      <div class="item">
+        <div class="item__image-wrap">
+          <img class="item__image" src="" alt="" />
+          <button class="item__button item__button--add">
+            <img src="images/icon-add-to-cart.svg" alt="add to cart icon" />
+            Add to Cart
+          </button>
+        </div>
+        <p class="item__category"></p>
+        <h4 class="item__name"></h4>
+        <p class="item__price"></p>
+      </div>
+    </template>
+
+    <template id="order-item-template">
+      <div class="order__item">
+        <img class="order__image" src="" alt="" />
+        <div class="order__details">
+          <h5 class="order__name"></h5>
+          <div class="order__quantity">
+            <span class="order__count"></span>
+            <span class="order__price"></span>
+          </div>
+        </div>
+        <p class="order__total"></p>
+      </div>
+    </template>
+
+    <template id="cart-template">
+      <div id="cart-content" class="cart__content">
+        <div class="cart__items"></div>
+
+        <div class="cart__total">
+          <p class="cart__total-label">Order Total</p>
+          <p class="cart__total-amount"></p>
+        </div>
+
+        <div class="cart__carbon-neutral">
+          <img
+            class="cart__carbon-icon"
+            src="images/icon-carbon-neutral.svg"
+            alt="carbon neutral" />
+          <span class="cart__carbon-text">
+            This is <strong>carbon-neutral</strong> delivery
+          </span>
+        </div>
+
+        <button class="cart__confirm-button">Confirm Order</button>
+      </div>
+    </template>
+
+    <template id="cart-empty-template">
+      <div id="cart-content" class="cart__content--empty">
+        <img
+          class="cart__image"
+          src="images/illustration-empty-cart.svg"
+          alt="empty cart illustration" />
+        <p class="cart__message">Your added items will appear here</p>
+      </div>
+    </template>
+
+    <main class="main">
+      <div class="products">
+        <h1 class="products__title">Desserts</h1>
+        <div class="products__list"></div>
+      </div>
+      <div class="cart">
+        <h2 class="cart__title">
+          Your Cart (<span class="cart__count">0</span>)
+        </h2>
+        <div id="cart-content" class="cart__content--empty">
+          <img
+            class="cart__image"
+            src="images/illustration-empty-cart.svg"
+            alt="empty cart illustration" />
+          <p class="cart__message">Your added items will appear here</p>
+        </div>
+      </div>
+    </main>
+
+    <div class="order__backdrop"></div>
+    <div class="order">
+      <img
+        class="order__icon"
+        src="images/icon-order-confirmed.svg"
+        alt="order confirmed icon" />
+
+      <h2 class="order__title">Order Confirmed</h2>
+      <p class="order__message">We hope you enjoy your food!</p>
+
+      <div class="order__content">
+        <div class="order__items"></div>
+
+        <div class="order__summary">
+          <p class="order__summary-label">Order Total</p>
+          <p class="order__summary-amount">$46.50</p>
+        </div>
+      </div>
+
+      <button class="order__button">Start New Order</button>
+    </div>
+  </body>
+</html>

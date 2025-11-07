@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browser extension manager UI</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <img class="header__logo" src="images/logo.svg" alt="logo" />
+        <button class="header__toggle">
+          <img src="images/icon-moon.svg" alt="moon icon" />
+        </button>
+      </header>
+
+      <section class="extensions">
+        <div class="extensions__header">
+          <h1 class="extensions__title">Extensions List</h1>
+          <div class="extensions__filters">
+            <button id="filter-all" class="extensions__filter-btn active">
+              All
+            </button>
+            <button id="filter-active" class="extensions__filter-btn">
+              Active
+            </button>
+            <button id="filter-inactive" class="extensions__filter-btn">
+              Inactive
+            </button>
+          </div>
+        </div>
+
+        <div class="extensions__list"></div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 94%);
+  --light-grey: hsl(0, 0%, 86%);
+  --smokey-grey: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-grey);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.calculator {
+  border-radius: 1rem;
+  border-bottom-right-radius: clamp(5rem, 10vw + 1rem, 10rem);
+  background-color: var(--white);
+  padding: clamp(0.8rem, 3vw + 0.8rem, 3rem);
+  max-width: 43rem;
+  width: 100%;
+}
+
+.calculator__form {
+  gap: clamp(0.5rem, 2vw + 0.5rem, 2rem);
+  display: flex;
+}
+
+.calculator__field {
+  flex-basis: 8rem;
+}
+
+.calculator__field > * + * {
+  margin-top: 0.5rem;
+}
+
+.calculator__field label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: var(--smokey-grey);
+  display: block;
+}
+
+.calculator__field input {
+  display: block;
+  outline: none;
+  border: thin solid var(--light-grey);
+  border-radius: 0.35rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  padding: 0.75rem clamp(0.75rem, 1vw + 0.5rem, 1rem);
+  color: var(--off-black);
+  font-weight: 800;
+  width: 100%;
+}
+
+.calculator__field input:is(:active, :focus) {
+  border-color: var(--purple);
+}
+
+.calculator__field input::placeholder {
+  font-weight: 700;
+}
+
+.calculator__field.error label {
+  color: var(--light-red);
+}
+
+.calculator__field.error input {
+  border-color: var(--light-red);
+}
+
+.form__error {
+  font-size: 0.75rem;
+  color: var(--light-red);
+}
+
+.calculator__button img {
+  border-radius: 100vw;
+  background-color: var(--purple);
+  position: relative;
+  padding: 1rem;
+}
+
+.calculator__button img:hover {
+  background-color: var(--off-black);
+}
+
+.calculator__button {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.calculator__button::before {
+  content: "";
+  background-color: var(--light-grey);
+  position: absolute;
+  top: 50%;
+  inset-inline: 0;
+  height: 0.05rem;
+}
+
+.calculator__result div {
+  line-height: 1.15;
+  font-size: clamp(2.8rem, 5vw + 1rem, 5rem);
+  font-weight: 800;
+}
+
+.calculator__value {
+  color: var(--purple);
+}
+
+@media (max-width: 35rem) {
+  .calculator__button {
+    justify-content: center;
+  }
+
+  .calculator__button img {
+    width: 3.5rem;
+  }
+
+  .calculator__button {
+    margin-block: 1.5rem;
+  }
+}
